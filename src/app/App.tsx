@@ -1,4 +1,3 @@
-import { ImgCardData } from '../data/ImgCard.ts'
 import { TextCardData } from '../data/TextCard.ts'
 import ImgCard from '../components/ImgCard/ImgCard.tsx'
 import TextCard from '../components/TextCard/TextCard.tsx'
