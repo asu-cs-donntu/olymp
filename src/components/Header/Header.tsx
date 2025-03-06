@@ -1,4 +1,5 @@
 import React from 'react';
+import Logo from '/logo donntu.svg';
 // import './main.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -8,7 +9,7 @@ const Header: React.FC = () => {
       <nav className="navbar navbar-expand-lg">
         <div className="container">
           <div className="logo">
-            <img src="./icons/logo donntu.svg" alt="" />
+            <img src={Logo} alt="" />
             <p>
               Донецкий Национальный <br />Технический Университет
             </p>

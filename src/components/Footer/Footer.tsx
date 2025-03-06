@@ -1,5 +1,5 @@
-import LogoDonNTUWhite from '/icons/logo donntu white.svg'
-import LogoASUCS from '/images/3.svg'
+import LogoDonNTUWhite from '/logo donntu white.svg'
+import LogoASUCS from '/3.svg'
 import './Footer.scss'
 
 function Footer() {

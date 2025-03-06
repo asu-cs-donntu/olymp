@@ -41,6 +41,7 @@
 }
 .card-black {
   color: black;
+  max-width: 48vw;
 }
 .h32 {
   font-size: 32px;
@@ -144,7 +145,7 @@ a {
 
 .header {
   position: relative;
-  background-image: url("./images/1.svg");
+  background-image: url("/1.svg");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
