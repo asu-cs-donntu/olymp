@@ -108,12 +108,14 @@
                     flex-direction: column;
                     align-items: center;
 
-                    p {
-                        font-size: 12px;
-                        font-weight: normal;
-                        color: #FFF;
-                        text-transform: uppercase;
-                        margin: 0;
+                    a {
+                        p {
+                            font-size: 12px;
+                            font-weight: normal;
+                            color: #FFF;
+                            text-transform: uppercase;
+                            margin: 0;
+                        }
                     }
                 }
             }

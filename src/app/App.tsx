@@ -1,4 +1,5 @@
 import { TextCardData } from '../data/TextCard.ts'
+
 import ImgCard from '../components/ImgCard/ImgCard.tsx'
 import TextCard from '../components/TextCard/TextCard.tsx'
 import Timer from '../components/Timer/Timer.tsx'
@@ -16,7 +17,6 @@ function App() {
             <div className="">
                 <Header/>
                 <div id="imgCards" className="row col-12 bg-d">
-
                     <ImgCard src={Img2} description="Олимпиада - это мероприятие, которое позволит оценить уровень знаний, даст толчок для дальнейшего совершенствования и расширения возможностей. Главная цель олимпиады - раскрыть направление информационных технологий  «изнутри»"/>
                     <ImgCard src={Img3} description="Олимпиада пройдет на базе кафедры автоматизированных систем управления 5 апреля, в дистанционном формате"/>
                     <ImgCard src={Img4} description="Участники смогут увидеть новые горизонты своего увлечения современными технологиями, а также сориентироваться в выборе профессии или закрепить сделанный уже выбор"/>

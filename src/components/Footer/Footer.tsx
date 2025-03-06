@@ -9,11 +9,13 @@ function Footer() {
                 <div id="top">
                     <div className="side">
                         <div id="logotype1">
-                            <a href="donntu.ru" target="_blank"><img src={LogoDonNTUWhite}/></a>
+                            <a href="https://donntu.ru/" target="_blank"><img src={LogoDonNTUWhite}/></a>
                         </div>
                         <div className="text">
-                            <p>донецкий национальный</p>
-                            <p>технический университет</p>
+                            <a href="https://donntu.ru/" target="_blank">
+                                <p>донецкий национальный</p>
+                                <p>технический университет</p>
+                            </a>
                         </div>
                     </div>
                     <div className="center"></div>

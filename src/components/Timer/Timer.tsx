@@ -1,9 +1,13 @@
 import { useEffect, useState } from 'react';
 import './Timer.scss';
 
-const targetStartDate = new Date("2025-04-01T00:00:00+03:00").getTime();
-const targetEndDate = new Date("2025-04-04T23:59:59+03:00").getTime();
-const finalDate = new Date("2025-04-05T00:00:00+03:00").getTime();
+const PHASES = {
+    REG_START: new Date("2025-04-01T00:00:00+03:00").getTime(),
+    REG_END: new Date("2025-04-03T23:59:59+03:00").getTime(),
+    STAGE1_START: new Date("2025-04-05T09:00:00+03:00").getTime(),
+    STAGE1_END: new Date("2025-04-05T12:00:00+03:00").getTime(),
+    FINAL_DATE: new Date("2025-04-05T12:00:00+03:00").getTime()
+};
 
 function getDeclension(num: number, singular: string, few: string, many: string) {
     if (num % 10 === 1 && num % 100 !== 11) return singular;
@@ -13,27 +17,40 @@ function getDeclension(num: number, singular: string, few: string, many: string)
 
 function Timer() {
     const [timeLeft, setTimeLeft] = useState("");
-    const [message, setMessage] = useState("до окончания регистрации осталось");
+    const [message, setMessage] = useState("");
     const [isHidden, setIsHidden] = useState(false);
 
     useEffect(() => {
         const updateTimer = () => {
             const now = new Date().getTime();
 
-            if (now >= finalDate) {
-                setMessage("регистрация завершена");
+            if (now >= PHASES.FINAL_DATE) {
+                setMessage("соревнование завершено");
                 setIsHidden(true);
                 return;
             }
 
-            let target = now < targetStartDate ? targetStartDate : targetEndDate;
-            let difference = target - now;
+            let target: number;
+            let newMessage: string;
 
-            if (now >= targetStartDate && now <= targetEndDate) {
-                setMessage("до окончания регистрации осталось");
-            } else if (now < targetStartDate) {
-                setMessage("до начала регистрации осталось");
+            if (now < PHASES.REG_START) {
+                target = PHASES.REG_START;
+                newMessage = "до начала регистрации осталось";
+            } else if (now <= PHASES.REG_END) {
+                target = PHASES.REG_END;
+                newMessage = "до окончания регистрации осталось";
+            } else if (now < PHASES.STAGE1_START) {
+                target = PHASES.STAGE1_START;
+                newMessage = "до начала первого этапа осталось";
+            } else if (now <= PHASES.STAGE1_END) {
+                target = PHASES.STAGE1_END;
+                newMessage = "до окончания первого этапа осталось";
+            } else {
+                return;
             }
+
+            setMessage(newMessage);
+            const difference = target - now;
 
             const days = Math.floor(difference / (1000 * 60 * 60 * 24));
             const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -47,14 +64,14 @@ function Timer() {
         };
 
         updateTimer();
-        const interval = setInterval(updateTimer, 60000);
+        const interval = setInterval(updateTimer, 5000);
         return () => clearInterval(interval);
     }, []);
 
     return (
         <div id="timer">
             <p className="fw-bold"><b>{message}</b></p>
-            {!isHidden && (
+            {!isHidden && message && (
                 <div className="fw-bold" id="time">
                     <p><b>{timeLeft}</b></p>
                 </div>

@@ -9,7 +9,7 @@ export const TextCardData = [
     },
     {
         heading: 'Регистрация:',
-        description: 'с 1 по 4 апреля',
+        description: 'с 1 по 3 апреля включительно',
     },
     {
         heading: 'Участники:',
