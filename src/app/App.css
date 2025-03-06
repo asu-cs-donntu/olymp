@@ -211,6 +211,10 @@ a:hover {
   .h65 {
     font-size: 45px;
   }
+
+  .header {
+    height: 60vh;
+  }
 }
 
 .row.col-12 {
