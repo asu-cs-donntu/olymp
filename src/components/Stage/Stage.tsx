@@ -16,7 +16,7 @@ interface Stage {
           {des.map((d, index) => (
               <div key={index}>
                 <b>{d.description1}:</b>
-                <p>&emsp;<>{d.description2}</></p>
+                <p><>{d.description2}</></p>
               </div>
             ))}
         </div>
