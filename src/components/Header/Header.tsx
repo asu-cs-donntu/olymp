@@ -19,12 +19,11 @@ const Header: React.FC = () => {
 
   const handleRegistrationClick = () => {
     const now = new Date().getTime();
-    const REG_START = new Date("2025-04-01T00:00:00+03:00").getTime();
     const REG_END = new Date("2025-04-03T23:59:59+03:00").getTime();
 
     let message = "В данный момент регистрация недоступна";
 
-    if (now >= REG_START && now <= REG_END) {
+    if (now <= REG_END) {
       message = "Для регистрации перейдите по следующему адресу: https://forms.yandex.ru/u/67c551ac068ff08c98a73abf/";
     }
 

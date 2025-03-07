@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import './Timer.scss';
 
 const PHASES = {
-    REG_START: new Date("2025-04-01T00:00:00+03:00").getTime(),
     REG_END: new Date("2025-04-03T23:59:59+03:00").getTime(),
     STAGE1_START: new Date("2025-04-05T09:00:00+03:00").getTime(),
     STAGE1_END: new Date("2025-04-05T12:00:00+03:00").getTime(),
@@ -33,10 +32,7 @@ function Timer() {
             let target: number;
             let newMessage: string;
 
-            if (now < PHASES.REG_START) {
-                target = PHASES.REG_START;
-                newMessage = "до начала регистрации осталось";
-            } else if (now <= PHASES.REG_END) {
+            if (now <= PHASES.REG_END) {
                 target = PHASES.REG_END;
                 newMessage = "до окончания регистрации осталось";
             } else if (now < PHASES.STAGE1_START) {

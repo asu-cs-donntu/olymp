@@ -9,10 +9,10 @@ export const TextCardData = [
     },
     {
         heading: 'Регистрация:',
-        description: 'с 1 по 3 апреля включительно',
+        description: 'до 3 апреля включительно',
     },
     {
         heading: 'Участники:',
-        description: 'школьники и студенты младших курсов университета'
+        description: 'школьники 9 - 11 классов'
     }
 ]
