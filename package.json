@@ -12,9 +12,12 @@
   "dependencies": {
     "@types/react-bootstrap": "^0.32.37",
     "bootstrap": "^5.3.3",
+    "primeicons": "^7.0.0",
+    "primereact": "^10.9.3",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.9",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.4.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",

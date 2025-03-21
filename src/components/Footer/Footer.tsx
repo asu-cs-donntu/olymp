@@ -5,7 +5,7 @@ import './Footer.scss'
 function Footer() {
     return(
         <>
-            <div id="footer">
+            <div className="footer">
                 <div id="top">
                     <div className="side">
                         <div id="logotype1">
