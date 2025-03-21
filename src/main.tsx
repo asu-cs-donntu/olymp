@@ -11,7 +11,7 @@ import 'primeicons/primeicons.css';
 const router = createBrowserRouter([
     {path: "/olymp/", element: <App/>},
     {path: "/olymp/results9328328427342384293942/", element: <Results/>}
-], {basename: '/olymp/'});
+]);
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
