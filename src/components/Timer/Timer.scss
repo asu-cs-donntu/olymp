@@ -1,0 +1,52 @@
+#timer {
+    font-family: OpenSans, sans-serif;
+    background-image: url("/public/5.svg");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    vertical-align: center;
+    justify-content: center;
+    height: 600px;
+
+    p {
+        color: #FFF;
+        font-size: 40px;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    #time {
+        margin: 70px auto;
+        background-color: #001A3B;
+        width: 600px;
+        height: 100px;
+        border-radius: 25px;
+
+        p {
+            font-size: 36px;
+            font-weight: 900;
+            text-transform: none;
+            margin: 22px auto;
+        }
+    }
+
+    #text {
+        background-color: #EF771A;
+        width: 680px;
+        height: 73px;
+        border-radius: 25px;
+        margin-left: auto;
+        margin-right: auto;
+
+        p {
+            margin: 9px auto;
+            color: #FFF;
+            font-size: 32px;
+            font-weight: normal;
+            text-transform: none;
+        }
+    }
+}
