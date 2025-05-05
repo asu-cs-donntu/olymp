@@ -2,7 +2,7 @@ import { TextCardData } from '../data/TextCard.ts'
 
 import ImgCard from '../components/ImgCard/ImgCard.tsx'
 import TextCard from '../components/TextCard/TextCard.tsx'
-import Timer from '../components/Timer/Timer.tsx'
+/*import Message from '../components/Message/Message.tsx'*/
 import Footer from '../components/Footer/Footer.tsx'
 import Stage from '../components/Stage/Stage.tsx'
 import Header from '../components/Header/Header.tsx'
@@ -136,14 +136,14 @@ function App() {
                                     "Результаты участников (набранные баллы, предварительные списки победителей и призеров) публикуются на сайте олимпиады в срок не позднее 20 рабочих дней после проведения этапа. Решение о результатах каждого этапа оформляется протоколом и утверждается оргкомитетом олимпиады. Окончательное решение о призерах и победителях утверждается председателем оргкомитета (заведующим кафедрой АСУ) на основании протоколов жюри",
                             },
                             {
-                                description1: "Дипломы",
+                                description1: "Награждение",
                                 description2:
-                                    "Дипломы победителям и призерам вручаются на торжественном мероприятии",
+                                    "Награждение победителей состоится 31 мая 2025 года на дне открытых дверей",
                             },
                         ]}
                     ></Stage>
                 </div>
-                <Timer/>
+                {/*<Message/>*/}
                 <Footer/>
             </div>
         </>
