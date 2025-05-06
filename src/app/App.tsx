@@ -2,7 +2,7 @@ import { TextCardData } from '../data/TextCard.ts'
 
 import ImgCard from '../components/ImgCard/ImgCard.tsx'
 import TextCard from '../components/TextCard/TextCard.tsx'
-/*import Message from '../components/Message/Message.tsx'*/
+import Message from '../components/Message/Message.tsx'
 import Footer from '../components/Footer/Footer.tsx'
 import Stage from '../components/Stage/Stage.tsx'
 import Header from '../components/Header/Header.tsx'
@@ -143,7 +143,8 @@ function App() {
                         ]}
                     ></Stage>
                 </div>
-                {/*<Message/>*/}
+                <div className="h65">Участникам</div>
+                <Message/>
                 <Footer/>
             </div>
         </>
