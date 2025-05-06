@@ -23,7 +23,7 @@ function Message() {
         </p>
         <p className="h32 m-5">
           Пожалуйста, уделите несколько минут и пройдите короткий{" "}
-          <a className="orange-text" href="https://forms.yandex.ru/u/6818e80d50569057c4036f2f/">
+          <a className="orange-text" target="_blank" href="https://forms.yandex.ru/u/6818e80d50569057c4036f2f/">
             опрос
           </a>
         </p>
